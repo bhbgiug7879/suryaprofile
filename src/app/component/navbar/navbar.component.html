@@ -1,0 +1,12 @@
+<nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item" *ngFor="let item of navItems">
+          <button 
+            class="navbar-link" 
+            [class.active]="activePage === item.toLowerCase()"
+            (click)="changePage(item.toLowerCase())">
+            {{ item }}
+          </button>
+        </li>
+      </ul>
+    </nav>

@@ -1,0 +1,11 @@
+<section class="clients">
+  <h3 class="h3 clients-title">Our Works</h3>
+
+  <ul class="clients-list has-scrollbar">
+    <li class="clients-item" *ngFor="let client of clients; let i = index" [class.active]="i === activeIndex">
+      <span>
+        <img [src]="client.img" [className]="client.classname" alt="client logo">
+      </span>
+    </li>
+  </ul>
+</section>

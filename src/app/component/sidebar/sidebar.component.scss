@@ -1,0 +1,17 @@
+.sidebar-img {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(92%) saturate(288%) hue-rotate(340deg) brightness(102%) contrast(100%);
+}
+
+.profile-img {
+    width: 165px;
+    border-radius: 50%;
+    height: 165px;
+    object-fit: cover;
+}
+
+.profile-card {
+    width: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}

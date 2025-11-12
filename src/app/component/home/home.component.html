@@ -1,0 +1,12 @@
+<main>
+      <app-sidebar></app-sidebar>
+      
+      <div class="main-content">
+        <app-navbar (pageChange)="onPageChange($any($event))"></app-navbar>
+        <app-aboutus *ngIf="activePage === 'about'"></app-aboutus>
+        <app-resume *ngIf="activePage === 'resume'"></app-resume>
+        <app-portfolio *ngIf="activePage === 'portfolio'"></app-portfolio>
+        <app-blog *ngIf="activePage === 'blog'"></app-blog>
+        <app-contact *ngIf="activePage === 'contact'"></app-contact>
+      </div>
+    </main>
