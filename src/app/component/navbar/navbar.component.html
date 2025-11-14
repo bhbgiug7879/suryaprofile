@@ -1,8 +1,8 @@
 <nav class="navbar">
-      <ul class="navbar-list">
+      <ul class="navbar-list" data-aos="zoom-in" data-aos-duration="2000">
         <li class="navbar-item" *ngFor="let item of navItems">
           <button 
-            class="navbar-link" 
+            class="navbar-link"
             [class.active]="activePage === item.toLowerCase()"
             (click)="changePage(item.toLowerCase())">
             {{ item }}

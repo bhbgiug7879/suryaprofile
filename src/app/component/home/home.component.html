@@ -1,7 +1,7 @@
 <main>
-      <app-sidebar></app-sidebar>
+      <app-sidebar data-aos="fade-right" data-aos-duration="2000"></app-sidebar>
       
-      <div class="main-content">
+      <div class="main-content" data-aos="fade-left" data-aos-duration="2000">
         <app-navbar (pageChange)="onPageChange($any($event))"></app-navbar>
         <app-aboutus *ngIf="activePage === 'about'"></app-aboutus>
         <app-resume *ngIf="activePage === 'resume'"></app-resume>

@@ -1,51 +1,53 @@
 <aside class="sidebar" [class.active]="isActive" data-sidebar>
-      <div class="sidebar-info">
-        <!-- <figure class="avatar-box">
+  <div class="sidebar-info">
+    <!-- <figure class="avatar-box">
         </figure> -->
-        <div class="profile-card">
-          <img src="/assets/images/profile.png" class="profile-img" alt="Richard hanrick">
+    <div class="profile-card">
+      <img data-aos="fade-down" data-aos-duration="2000" src="assets/images/profile.png" class="profile-img" alt="profile.png">
+       <!-- <img data-aos="fade-down" data-aos-duration="2000" src="assets/images/avatar-1.png" alt=""> -->
+    </div>
+
+    <div class="info-content" data-aos="fade-up" data-aos-duration="1500">
+      <h1 class="name" title="Richard hanrick">Surya Kumar N</h1>
+      <p class="title">Web developer</p>
+    </div>
+
+    <button class="info_more-btn" (click)="toggleSidebar()">
+      <span>Show Contacts</span>
+      <!-- <ion-icon name="chevron-down"></ion-icon> -->
+    </button>
+  </div>
+
+  <div class="sidebar-info_more">
+    <div class="separator"></div>
+
+    <ul class="contacts-list">
+      <li class="contact-item" *ngFor="let contact of contacts">
+        <div class="icon-box" data-aos="fade-left" data-aos-duration="2000">
+          <img [src]="contact.icon" alt="" class="sidebar-img">
         </div>
+        <div class="contact-info">
+          <p class="contact-title">{{ contact.title }}</p>
+          <a *ngIf="contact.link" target="_blank" [href]="contact.link" class="contact-link">
+            {{ contact.value }}
+          </a>
 
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Surya Kumar N</h1>
-          <p class="title">Web developer</p>
+          <time *ngIf="contact.datetime" [attr.datetime]="contact.datetime">
+            {{ contact.value }}
+          </time>
+          <address *ngIf="contact.type === 'address'">{{ contact.value }}</address>
         </div>
+      </li>
+    </ul>
 
-        <button class="info_more-btn" (click)="toggleSidebar()">
-          <span>Show Contacts</span>
-          <!-- <ion-icon name="chevron-down"></ion-icon> -->
-        </button>
-      </div>
+    <div class="separator"></div>
 
-      <div class="sidebar-info_more">
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-          <li class="contact-item" *ngFor="let contact of contacts">
-            <div class="icon-box">
-              <img [src]="contact.icon" alt="" class="sidebar-img">
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">{{ contact.title }}</p>
-              <a *ngIf="contact.link" [href]="contact.link" class="contact-link">
-                {{ contact.value }}
-              </a>
-              <time *ngIf="contact.datetime" [attr.datetime]="contact.datetime">
-                {{ contact.value }}
-              </time>
-              <address *ngIf="contact.type === 'address'">{{ contact.value }}</address>
-            </div>
-          </li>
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-          <li class="social-item" *ngFor="let social of socialLinks">
-            <a [href]="social.url" class="social-link">
-              <!-- <ion-icon [name]="social.icon"></ion-icon> -->
-            </a>
-          </li>
-        </ul>
-      </div>
-    </aside>
+    <ul class="social-list">
+      <li class="social-item" *ngFor="let social of socialLinks">
+        <a [href]="social.url" class="social-link">
+          <!-- <ion-icon [name]="social.icon"></ion-icon> -->
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>

@@ -15,6 +15,7 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { ServicesComponent } from './component/services/services.component';
 import { TestimonialsComponent } from './component/testimonials/testimonials.component';
 import { ClientsComponent } from './component/clients/clients.component';
+import { StudyComponent } from './component/study/study.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ClientsComponent } from './component/clients/clients.component';
     SidebarComponent,
     ServicesComponent,
     TestimonialsComponent,
-    ClientsComponent
+    ClientsComponent,
+    StudyComponent
   ],
   imports: [
     FormsModule,
@@ -44,7 +46,8 @@ import { ClientsComponent } from './component/clients/clients.component';
     PortfolioComponent,
     BlogComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    StudyComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

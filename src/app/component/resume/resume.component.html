@@ -1,6 +1,6 @@
 <article class="resume active" data-page="resume">
       <header>
-        <h2 class="h2 article-title">Resume</h2>
+        <h2 data-aos="fade-left" data-aos-duration="2000" class="h2 article-title">Resume</h2>
       </header>
 
       <section class="timeline">
@@ -8,14 +8,14 @@
           <div class="icon-box">
             <!-- <ion-icon name="book-outline"></ion-icon> -->
           </div>
-          <h3 class="h3">Education</h3>
+          <h3 class="h3" data-aos="fade-left" data-aos-duration="2000">Education</h3>
         </div>
 
         <ol class="timeline-list">
           <li class="timeline-item" *ngFor="let edu of education">
-            <h4 class="h4 timeline-item-title">{{ edu.institution }}</h4>
-            <span>{{ edu.period }}</span>
-            <p class="timeline-text">{{ edu.description }}</p>
+            <h4 data-aos="fade-right" data-aos-duration="2000" class="h4 timeline-item-title">{{ edu.institution }}</h4>
+            <span data-aos="fade-left" data-aos-duration="2000">{{ edu.period }}</span>
+            <p data-aos="fade-left" data-aos-duration="2000" class="timeline-text">{{ edu.description }}</p>
           </li>
         </ol>
       </section>
@@ -25,23 +25,23 @@
           <div class="icon-box">
             <!-- <ion-icon name="book-outline"></ion-icon> -->
           </div>
-          <h3 class="h3">Experience</h3>
+          <h3 class="h3" data-aos="fade-left" data-aos-duration="2000">Experience</h3>
         </div>
 
         <ol class="timeline-list">
           <li class="timeline-item" *ngFor="let exp of experience">
-            <h4 class="h4 timeline-item-title">{{ exp.position }}</h4>
-            <span>{{ exp.period }}</span>
-            <p class="timeline-text">{{ exp.description }}</p>
+            <h4 data-aos="fade-right" data-aos-duration="2000" class="h4 timeline-item-title">{{ exp.position }}</h4>
+            <span data-aos="fade-right" data-aos-duration="2000">{{ exp.period }}</span>
+            <p data-aos="fade-right" data-aos-duration="2000" class="timeline-text">{{ exp.description }}</p>
           </li>
         </ol>
       </section>
 
       <section class="skill">
-        <h3 class="h3 skills-title">My skills</h3>
+        <h3 class="h3 skills-title" data-aos="fade-left" data-aos-duration="2000">My skills</h3>
 
         <ul class="skills-list content-card">
-          <li class="skills-item" *ngFor="let skill of skills">
+          <li class="skills-item" *ngFor="let skill of skills" data-aos="zoom-out" data-aos-duration="2000">
             <div class="title-wrapper">
               <h5 class="h5">{{ skill.name }}</h5>
               <data [value]="skill.percentage">{{ skill.percentage }}%</data>

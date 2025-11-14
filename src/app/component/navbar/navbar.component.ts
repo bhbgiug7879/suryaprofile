@@ -8,7 +8,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class NavbarComponent {
 @Output() pageChange = new EventEmitter<string>();
   
-  navItems = ['About', 'Resume', 'Portfolio', 'Blog', 'Contact'];
+  navItems = ['About', 'Resume', 'Portfolio', 'Contact'];
   activePage = 'about';
 
   changePage(page: string) {
